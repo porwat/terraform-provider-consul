@@ -18,6 +18,11 @@ func resourceConsulNetworkArea() *schema.Resource {
 		Delete: resourceConsulNetworkAreaDelete,
 
 		Schema: map[string]*schema.Schema{
+			"address": {
+				Type:     schema.TypeString,
+				Optional: true,
+				ForceNew: true,
+			},
 			"datacenter": {
 				Type:     schema.TypeString,
 				Optional: true,
